@@ -3,8 +3,8 @@ version: '2'
 services:
   server:
     build: ./docker/ruby
-    image: bxl/sdk-ruby:2.5
-    container_name: bxl_sdk_ruby
+    image: bxl/mooris-ruby:2.4.1
+    container_name: bxl_mooris_ruby
     volumes_from:
       - code
     ports:
@@ -17,7 +17,7 @@ services:
   code:
     build: ./docker/volume
     image: bxl/volume
-    container_name: bxl_sdk_ruby_volume
+    container_name: bxl_mooris_ruby_volume
     volumes:
     - ./srv:/srv
     environment:
